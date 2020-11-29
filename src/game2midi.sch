@@ -1,0 +1,378 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 74xx:74HCT04 U1
+U 3 1 5FBF499E
+P 4550 1550
+F 0 "U1" H 4550 1867 50  0000 C CNN
+F 1 "74HCT04" H 4550 1776 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 4550 1550 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 4550 1550 50  0001 C CNN
+	3    4550 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT04 U1
+U 4 1 5FBF539C
+P 5150 1550
+F 0 "U1" H 5150 1867 50  0000 C CNN
+F 1 "74HCT04" H 5150 1776 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 5150 1550 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 5150 1550 50  0001 C CNN
+	4    5150 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DIN-5_180degree J2
+U 1 1 5FBF9F01
+P 2600 1800
+F 0 "J2" H 2600 1525 50  0000 C CNN
+F 1 "DIN-5_180degree" H 2600 1434 50  0000 C CNN
+F 2 "game2midi:57PC5F" H 2600 1800 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 2600 1800 50  0001 C CNN
+	1    2600 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 1250 3700 1200
+$Comp
+L power:+5V #PWR05
+U 1 1 5FC00509
+P 3700 1000
+F 0 "#PWR05" H 3700 850 50  0001 C CNN
+F 1 "+5V" H 3715 1173 50  0000 C CNN
+F 2 "" H 3700 1000 50  0001 C CNN
+F 3 "" H 3700 1000 50  0001 C CNN
+	1    3700 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5FBFF7D9
+P 3700 2000
+F 0 "#PWR06" H 3700 1750 50  0001 C CNN
+F 1 "GND" H 3705 1827 50  0000 C CNN
+F 2 "" H 3700 2000 50  0001 C CNN
+F 3 "" H 3700 2000 50  0001 C CNN
+	1    3700 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 1850 3700 2000
+$Comp
+L Isolator:H11L1 U2
+U 1 1 5FBF6CC4
+P 3700 1550
+F 0 "U2" H 4044 1596 50  0000 L CNN
+F 1 "H11L1" H 4044 1505 50  0000 L CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_Socket_LongPads" H 3610 1550 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/H11L3M-D.PDF" H 3610 1550 50  0001 C CNN
+	1    3700 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FC1E4BF
+P 4000 1350
+F 0 "R2" H 4070 1396 50  0000 L CNN
+F 1 "270" H 4070 1305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3930 1350 50  0001 C CNN
+F 3 "~" H 4000 1350 50  0001 C CNN
+	1    4000 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1550 4000 1500
+Wire Wire Line
+	4000 1200 3700 1200
+Connection ~ 3700 1200
+Wire Wire Line
+	3700 1200 3700 1000
+Wire Wire Line
+	4000 1550 4250 1550
+Connection ~ 4000 1550
+$Comp
+L Diode:1N4148 D1
+U 1 1 5FC720E9
+P 3200 1550
+F 0 "D1" V 3154 1630 50  0000 L CNN
+F 1 "1N4148" V 3245 1630 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 3200 1375 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3200 1550 50  0001 C CNN
+	1    3200 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3200 1700 3400 1700
+Wire Wire Line
+	3400 1700 3400 1650
+Wire Wire Line
+	3400 1450 3400 1400
+Wire Wire Line
+	3400 1400 3200 1400
+$Comp
+L Device:R R1
+U 1 1 5FC76A78
+P 2900 1400
+F 0 "R1" V 2693 1400 50  0000 C CNN
+F 1 "270" V 2784 1400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 2830 1400 50  0001 C CNN
+F 3 "~" H 2900 1400 50  0001 C CNN
+	1    2900 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3200 1700 2900 1700
+Connection ~ 3200 1700
+Wire Wire Line
+	3200 1400 3050 1400
+Connection ~ 3200 1400
+Wire Wire Line
+	2750 1400 2300 1400
+Wire Wire Line
+	2300 1400 2300 1700
+$Comp
+L Connector:DIN-5_180degree J3
+U 1 1 5FBF8A5B
+P 5150 2800
+F 0 "J3" H 5150 2525 50  0000 C CNN
+F 1 "DIN-5_180degree" H 5150 2434 50  0000 C CNN
+F 2 "game2midi:57PC5F" H 5150 2800 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 5150 2800 50  0001 C CNN
+	1    5150 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 2500 5650 2500
+Wire Wire Line
+	4850 2600 4850 2700
+Wire Wire Line
+	5550 2700 5450 2700
+$Comp
+L power:+5V #PWR07
+U 1 1 5FC12BE8
+P 4850 2300
+F 0 "#PWR07" H 4850 2150 50  0001 C CNN
+F 1 "+5V" H 4865 2473 50  0000 C CNN
+F 2 "" H 4850 2300 50  0001 C CNN
+F 3 "" H 4850 2300 50  0001 C CNN
+	1    4850 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5FC11B30
+P 4850 2450
+F 0 "R4" H 4780 2404 50  0000 R CNN
+F 1 "270" H 4780 2495 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4780 2450 50  0001 C CNN
+F 3 "~" H 4850 2450 50  0001 C CNN
+	1    4850 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5FC10FEA
+P 5650 2500
+F 0 "#PWR08" H 5650 2250 50  0001 C CNN
+F 1 "GND" H 5655 2327 50  0000 C CNN
+F 2 "" H 5650 2500 50  0001 C CNN
+F 3 "" H 5650 2500 50  0001 C CNN
+	1    5650 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3050 5550 2700
+Wire Wire Line
+	4650 3050 5550 3050
+Wire Wire Line
+	4650 2800 4650 3050
+Wire Wire Line
+	4550 2800 4650 2800
+$Comp
+L Device:R R3
+U 1 1 5FC06474
+P 4400 2800
+F 0 "R3" V 4193 2800 50  0000 C CNN
+F 1 "270" V 4284 2800 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4330 2800 50  0001 C CNN
+F 3 "~" H 4400 2800 50  0001 C CNN
+	1    4400 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74HCT04 U1
+U 2 1 5FBF34F1
+P 3950 2800
+F 0 "U1" H 3950 3117 50  0000 C CNN
+F 1 "74HCT04" H 3950 3026 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 3950 2800 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 3950 2800 50  0001 C CNN
+	2    3950 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT04 U1
+U 1 1 5FBF1290
+P 3350 2800
+F 0 "U1" H 3350 3117 50  0000 C CNN
+F 1 "74HCT04" H 3350 3026 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 3350 2800 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 3350 2800 50  0001 C CNN
+	1    3350 2800
+	1    0    0    -1  
+$EndComp
+Connection ~ 1500 2800
+$Comp
+L power:+5V #PWR04
+U 1 1 5FC04761
+P 1500 2800
+F 0 "#PWR04" H 1500 2650 50  0001 C CNN
+F 1 "+5V" H 1515 2973 50  0000 C CNN
+F 2 "" H 1500 2800 50  0001 C CNN
+F 3 "" H 1500 2800 50  0001 C CNN
+	1    1500 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2900 1650 2900
+Wire Wire Line
+	1500 2800 1500 2900
+Wire Wire Line
+	1650 2800 1500 2800
+Connection ~ 1500 2300
+$Comp
+L power:GND #PWR03
+U 1 1 5FC03169
+P 1500 2300
+F 0 "#PWR03" H 1500 2050 50  0001 C CNN
+F 1 "GND" H 1505 2127 50  0000 C CNN
+F 2 "" H 1500 2300 50  0001 C CNN
+F 3 "" H 1500 2300 50  0001 C CNN
+	1    1500 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2300 1650 2300
+Wire Wire Line
+	1500 2100 1500 2300
+Wire Wire Line
+	1650 2100 1500 2100
+$Comp
+L Connector:DB15_Male_MountingHoles J1
+U 1 1 5FBFBC68
+P 1950 2200
+F 0 "J1" H 2104 2202 50  0000 L CNN
+F 1 "DB15_Male_MountingHoles" H 2104 2111 50  0000 L CNN
+F 2 "game2midi:182-YYY-113RYY1" H 1950 2200 50  0001 C CNN
+F 3 " ~" H 1950 2200 50  0001 C CNN
+	1    1950 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 2200 1200 2200
+Wire Wire Line
+	1650 1600 1200 1600
+Wire Wire Line
+	3050 2800 2850 2800
+Wire Wire Line
+	5450 1550 5650 1550
+Text Label 1200 1600 0    50   ~ 0
+RXD
+Text Label 1200 2200 0    50   ~ 0
+TXD
+Text Label 5650 1550 2    50   ~ 0
+RXD
+Text Label 2850 2800 0    50   ~ 0
+TXD
+$Comp
+L 74xx:74HCT04 U1
+U 7 1 5FD2F52A
+P 800 2150
+F 0 "U1" H 1030 2196 50  0000 L CNN
+F 1 "74HCT04" H 1030 2105 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 800 2150 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 800 2150 50  0001 C CNN
+	7    800  2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5FD37844
+P 800 1650
+F 0 "#PWR01" H 800 1500 50  0001 C CNN
+F 1 "+5V" H 815 1823 50  0000 C CNN
+F 2 "" H 800 1650 50  0001 C CNN
+F 3 "" H 800 1650 50  0001 C CNN
+	1    800  1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5FD38463
+P 800 2650
+F 0 "#PWR02" H 800 2400 50  0001 C CNN
+F 1 "GND" H 805 2477 50  0000 C CNN
+F 2 "" H 800 2650 50  0001 C CNN
+F 3 "" H 800 2650 50  0001 C CNN
+	1    800  2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FC76B21
+P 800 3200
+F 0 "C1" H 915 3246 50  0000 L CNN
+F 1 "0.1" H 915 3155 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 838 3050 50  0001 C CNN
+F 3 "~" H 800 3200 50  0001 C CNN
+	1    800  3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 5FC786D6
+P 800 3050
+F 0 "#PWR0101" H 800 2900 50  0001 C CNN
+F 1 "+5V" H 815 3223 50  0000 C CNN
+F 2 "" H 800 3050 50  0001 C CNN
+F 3 "" H 800 3050 50  0001 C CNN
+	1    800  3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5FC79483
+P 800 3350
+F 0 "#PWR0102" H 800 3100 50  0001 C CNN
+F 1 "GND" H 805 3177 50  0000 C CNN
+F 2 "" H 800 3350 50  0001 C CNN
+F 3 "" H 800 3350 50  0001 C CNN
+	1    800  3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5FC79E1F
+P 1950 3100
+F 0 "#PWR0103" H 1950 2850 50  0001 C CNN
+F 1 "GND" H 1955 2927 50  0000 C CNN
+F 2 "" H 1950 3100 50  0001 C CNN
+F 3 "" H 1950 3100 50  0001 C CNN
+	1    1950 3100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
